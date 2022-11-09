@@ -1,0 +1,34 @@
+name: clone workflow
+
+on: 
+
+  workflow_dispatch:   
+
+jobs:
+
+  job_one:
+
+    name: Clone
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Clone
+
+        uses: appleboy/ssh-action@master
+
+        with:
+
+          host: ${{ secrets.HOST }} 
+
+          username: ${{ secrets.USERNAME }}
+
+          password: ${{ secrets.PASSWORD }}
+
+          port:  ${{ secrets.PORT }}
+
+          script: |
+
+              cd ../pub
+              git clone git@github.com:SurajNarang/CMSC389T-Web-Template.git
