@@ -2,7 +2,7 @@ name: clone workflow
 
 on: 
 
-  workflow_dispatch:   
+  workflow_dispatch:   
 
 jobs:
 
