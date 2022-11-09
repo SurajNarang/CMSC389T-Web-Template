@@ -2,6 +2,9 @@ version: '3'
 
 services:
   nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
     #fill out the configuration here
     networks:
       - app-network
@@ -27,8 +30,8 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      #fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+
+      device: /Users/surajnarang/Documents/CMSC389T/CMSC389T-Web-Template
       o: bind
 
 networks:
